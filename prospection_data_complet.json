@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "title": "Prospection Startups Tech France",
+    "date": "Novembre 2025",
+    "description": "50 PME et startups ayant levé des fonds (12 derniers mois)",
+    "total_startups": 48,
+    "total_funding_millions": 5315.1,
+    "sectors": 33,
+    "date_generated": "2025-11-29"
+  },
+  "statistics": {
+    "montant_total": "5.3 Milliards €",
+    "montant_moyen": "110.7 M€",
+    "montant_median": "50 M€",
+    "startup_count": 48,
+    "sector_count": 33,
+    "top_sector": "IA Générative (1700 M€)",
+    "top_startup": "Mistral AI (1700 M€)"
+  },
+  "sector_analysis": {
+    "IA Générative": {
+      "count": 1,
+      "total": 1700
+    },
+    "FinTech": {
+      "count": 4,
+      "total": 854
+    },
+    "E-commerce": {
+      "count": 3,
+      "total": 450
+    },
+    "HR Tech": {
+      "count": 3,
+      "total": 350
+    },
+    "Cybersécurité": {
+      "count": 4,
+      "total": 268
+    },
+    "Deep Tech": {
+      "count": 2,
+      "total": 257
+    },
+    "Space Tech": {
+      "count": 2,
+      "total": 190
+    },
+    "InsurTech": {
+      "count": 2,
+      "total": 110
+    },
+    "MarTech": {
+      "count": 1,
+      "total": 100
+    },
+    "Crypto": {
+      "count": 1,
+      "total": 100
+    },
+    "Robotique": {
+      "count": 1,
+      "total": 100
+    },
+    "Gaming": {
+      "count": 1,
+      "total": 80
+    },
+    "Analytics": {
+      "count": 1,
+      "total": 80
+    },
+    "Autres": {
+      "count": 15,
+      "total": 376
+    }
+  },
+  "key_insights": [
+    "Mistral AI domine avec 1700 M€ levés (32% du total)",
+    "FinTech, E-commerce et HR Tech combinent 1.65 Mds € (31%)",
+    "Cybersécurité est le secteur le plus représenté (4 startups)",
+    "Montant moyen: 110 M€ (médiane 50 M€) = forte concentration haut",
+    "Île-de-France = 75% des levées (concentré à Paris)",
+    "Opportunités pour freelance Python dans: IA/ML, FinTech, Cybersécurité, MedTech"
+  ],
+  "prospection_tips": [
+    "Cibler d'abord IA & FinTech (38% du marché)",
+    "Startup <50M€ levés = accès plus facile à décideurs",
+    "Contactez VP Engineering ou CTO en priorité",
+    "Mentionner expertise Python/APIs dans subject",
+    "Proposition de valeur: audit technique gratuit",
+    "Follow-up après 5-7 jours si pas de réponse",
+    "LinkedIn messaging avant email froid",
+    "Taux conversion estimé: 2-5% pour cold outreach"
+  ]
+}

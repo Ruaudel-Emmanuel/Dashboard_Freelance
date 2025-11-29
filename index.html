@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prospection Startups Tech France</title>
+    <style>
+        :root {
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+  --color-red-500-rgb: 192, 21, 47;
+  --color-red-400-rgb: 255, 84, 89;
+  --color-orange-500-rgb: 168, 75, 47;
+  --color-orange-400-rgb: 230, 129, 97;
+  --color-bg-1: rgba(59, 130, 246, 0.08);
+  --color-bg-2: rgba(245, 158, 11, 0.08);
+  --color-bg-3: rgba(34, 197, 94, 0.08);
+  --color-bg-4: rgba(239, 68, 68, 0.08);
+  --color-bg-5: rgba(147, 51, 234, 0.08);
+  --color-bg-6: rgba(249, 115, 22, 0.08);
+  --color-bg-7: rgba(236, 72, 153, 0.08);
+  --color-bg-8: rgba(6, 182, 212, 0.08);
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+  --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --focus-outline: 2px solid var(--color-primary);
+  --status-bg-opacity: 0.15;
+  --status-border-opacity: 0.25;
+  --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  --color-success-rgb: 33, 128, 141;
+  --color-error-rgb: 192, 21, 47;
+  --color-warning-rgb: 168, 75, 47;
+  --color-info-rgb: 98, 108, 113;
+  --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: "Berkeley Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --letter-spacing-tight: -0.01em;
+  --space-0: 0;
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --radius-sm: 6px;
+  --radius-base: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-gray-400-rgb: 119, 124, 124;
+    --color-teal-300-rgb: 50, 184, 198;
+    --color-gray-300-rgb: 167, 169, 169;
+    --color-gray-200-rgb: 245, 245, 245;
+    --color-bg-1: rgba(29, 78, 216, 0.15);
+    --color-bg-2: rgba(180, 83, 9, 0.15);
+    --color-bg-3: rgba(21, 128, 61, 0.15);
+    --color-bg-4: rgba(185, 28, 28, 0.15);
+    --color-bg-5: rgba(107, 33, 168, 0.15);
+    --color-bg-6: rgba(194, 65, 12, 0.15);
+    --color-bg-7: rgba(190, 24, 93, 0.15);
+    --color-bg-8: rgba(8, 145, 178, 0.15);
+    --color-background: var(--color-charcoal-700);
+    --color-surface: var(--color-charcoal-800);
+    --color-text: var(--color-gray-200);
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-primary: var(--color-teal-300);
+    --color-primary-hover: var(--color-teal-400);
+    --color-primary-active: var(--color-teal-800);
+    --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+    --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+    --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-error: var(--color-red-400);
+    --color-success: var(--color-teal-300);
+    --color-warning: var(--color-orange-400);
+    --color-info: var(--color-gray-300);
+    --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+    --color-btn-primary-text: var(--color-slate-900);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+    --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    --button-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+    --color-success-rgb: var(--color-teal-300-rgb);
+    --color-error-rgb: var(--color-red-400-rgb);
+    --color-warning-rgb: var(--color-orange-400-rgb);
+    --color-info-rgb: var(--color-gray-300-rgb);
+  }
+}
+
+@font-face {
+  font-family: 'FKGroteskNeue';
+  src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2') format('woff2');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: var(--line-height-normal);
+}
+
+.header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-24) var(--space-32);
+  box-shadow: var(--shadow-sm);
+}
+
+.header h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+.header p {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  margin: 0;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: var(--space-4);
+  background-color: var(--color-surface);
+  padding: var(--space-8) var(--space-32);
+  border-bottom: 1px solid var(--color-border);
+  overflow-x: auto;
+}
+
+.nav-tab {
+  padding: var(--space-12) var(--space-20);
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  border-radius: var(--radius-base);
+  transition: all var(--duration-fast) var(--ease-standard);
+  white-space: nowrap;
+}
+
+.nav-tab:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.nav-tab.active {
+  background-color: var(--color-primary);
+  color: var(--color-btn-primary-text);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-32);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-20);
+  margin-bottom: var(--space-32);
+}
+
+.kpi-card {
+  background-color: var(--color-surface);
+  padding: var(--space-24);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.kpi-card h3 {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.kpi-card .value {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.chart-container {
+  background-color: var(--color-surface);
+  padding: var(--space-24);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-24);
+}
+
+.chart-container h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-20);
+  color: var(--color-text);
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 400px;
+}
+
+.top-raises {
+  background-color: var(--color-surface);
+  padding: var(--space-24);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.top-raises h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-20);
+}
+
+.raise-item {
+  padding: var(--space-16);
+  border-bottom: 1px solid var(--color-card-border-inner);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.raise-item:last-child {
+  border-bottom: none;
+}
+
+.raise-item .name {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.raise-item .sector {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-4);
+}
+
+.raise-item .amount {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.filters {
+  display: flex;
+  gap: var(--space-16);
+  margin-bottom: var(--space-24);
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-group label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-8);
+  color: var(--color-text);
+}
+
+.filter-group input,
+.filter-group select {
+  width: 100%;
+  padding: var(--space-10) var(--space-12);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+}
+
+.filter-group select {
+  appearance: none;
+  background-image: var(--select-caret-light);
+  background-repeat: no-repeat;
+  background-position: right var(--space-12) center;
+  background-size: 16px;
+  padding-right: var(--space-32);
+}
+
+@media (prefers-color-scheme: dark) {
+  .filter-group select {
+    background-image: var(--select-caret-dark);
+  }
+}
+
+.table-container {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table thead {
+  background-color: var(--color-secondary);
+}
+
+.data-table th {
+  padding: var(--space-16);
+  text-align: left;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  user-select: none;
+}
+
+.data-table th:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.data-table td {
+  padding: var(--space-16);
+  border-top: 1px solid var(--color-card-border-inner);
+  font-size: var(--font-size-base);
+}
+
+.data-table tbody tr:hover {
+  background-color: var(--color-bg-1);
+}
+
+.data-table a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.data-table a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  padding: var(--space-10) var(--space-20);
+  border: none;
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-standard);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-btn-primary-text);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.btn-sm {
+  padding: var(--space-6) var(--space-12);
+  font-size: var(--font-size-sm);
+}
+
+.template-section {
+  background-color: var(--color-surface);
+  padding: var(--space-24);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-24);
+}
+
+.template-section h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-8);
+  color: var(--color-text);
+}
+
+.template-section h3 {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-16);
+  font-weight: var(--font-weight-normal);
+}
+
+.template-section textarea {
+  width: 100%;
+  min-height: 300px;
+  padding: var(--space-16);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  resize: vertical;
+  margin-bottom: var(--space-16);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-20);
+  margin-bottom: var(--space-32);
+}
+
+.stat-card {
+  background-color: var(--color-surface);
+  padding: var(--space-20);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-card h3 {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-12);
+  font-weight: var(--font-weight-medium);
+}
+
+.stat-card .stat-value {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.stat-card ul {
+  list-style: none;
+  margin-top: var(--space-12);
+}
+
+.stat-card li {
+  padding: var(--space-8) 0;
+  border-bottom: 1px solid var(--color-card-border-inner);
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat-card li:last-child {
+  border-bottom: none;
+}
+
+.recommendations {
+  background-color: var(--color-bg-3);
+  padding: var(--space-24);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+}
+
+.recommendations h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-16);
+  color: var(--color-text);
+}
+
+.recommendations ul {
+  list-style: none;
+}
+
+.recommendations li {
+  padding: var(--space-12) 0;
+  padding-left: var(--space-24);
+  position: relative;
+}
+
+.recommendations li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-success);
+  font-weight: var(--font-weight-bold);
+}
+
+.export-actions {
+  display: flex;
+  gap: var(--space-16);
+  margin-bottom: var(--space-24);
+}
+
+.toast {
+  position: fixed;
+  top: var(--space-20);
+  right: var(--space-20);
+  background-color: var(--color-primary);
+  color: var(--color-btn-primary-text);
+  padding: var(--space-16) var(--space-24);
+  border-radius: var(--radius-base);
+  box-shadow: var(--shadow-lg);
+  font-weight: var(--font-weight-medium);
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.sort-indicator {
+  margin-left: var(--space-4);
+  font-size: var(--font-size-xs);
+}
+
+.badge {
+  display: inline-block;
+  padding: var(--space-4) var(--space-10);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  background-color: var(--color-bg-1);
+  color: var(--color-text);
+}
+
+.charts-grid {
+  display: grid;
+  gap: var(--space-24);
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🚀 Prospection Startups Tech France</h1>
+        <p>50 PME et startups françaises qui ont levé des fonds au cours des 12 derniers mois</p>
+    </header>
+
+    <nav class="nav-tabs">
+        <button class="nav-tab active" data-tab="dashboard">Dashboard</button>
+        <button class="nav-tab" data-tab="startups">Startups</button>
+        <button class="nav-tab" data-tab="templates">Templates Email</button>
+        <button class="nav-tab" data-tab="graphiques">Graphiques</button>
+        <button class="nav-tab" data-tab="analyse">Analyse</button>
+        <button class="nav-tab" data-tab="export">Export</button>
+    </nav>
+
+    <div class="container">
+        <!-- Dashboard Tab -->
+        <div id="dashboard" class="tab-content active">
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <h3>Startups</h3>
+                    <div class="value" id="kpi-count">50</div>
+                </div>
+                <div class="kpi-card">
+                    <h3>Montant Total Levé</h3>
+                    <div class="value" id="kpi-total">-</div>
+                </div>
+                <div class="kpi-card">
+                    <h3>Secteurs</h3>
+                    <div class="value" id="kpi-sectors">-</div>
+                </div>
+                <div class="kpi-card">
+                    <h3>Moyenne par Levée</h3>
+                    <div class="value" id="kpi-average">-</div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h2>Répartition par Secteur</h2>
+                <div class="chart-wrapper">
+                    <canvas id="sectorChart"></canvas>
+                </div>
+            </div>
+
+            <div class="top-raises">
+                <h2>Top 5 Levées de Fonds</h2>
+                <div id="topRaises"></div>
+            </div>
+        </div>
+
+        <!-- Startups Tab -->
+        <div id="startups" class="tab-content">
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Rechercher par nom</label>
+                    <input type="text" id="searchName" placeholder="Nom de la startup...">
+                </div>
+                <div class="filter-group">
+                    <label>Filtrer par secteur</label>
+                    <select id="filterSector">
+                        <option value="">Tous les secteurs</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table" id="startupsTable">
+                    <thead>
+                        <tr>
+                            <th data-sort="rank">Rank</th>
+                            <th data-sort="nom">Nom</th>
+                            <th data-sort="secteur">Secteur</th>
+                            <th data-sort="montant">Montant Levé</th>
+                            <th data-sort="stage">Stage</th>
+                            <th>LinkedIn</th>
+                            <th>Site Web</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="startupsTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Templates Email Tab -->
+        <div id="templates" class="tab-content">
+            <div class="template-section">
+                <h2>Template 1: Approche Courte (30 sec)</h2>
+                <h3>Email concis et direct pour une première prise de contact</h3>
+                <textarea id="template1" readonly>Objet: Développeur Python disponible pour [NOM_STARTUP]
+
+Bonjour,
+
+Je suis développeur Python avec 5 ans d'expérience en IA et data engineering.
+
+J'ai vu que [NOM_STARTUP] a récemment levé des fonds et développe activement sa stack technique.
+
+Seriez-vous intéressé(e) par un échange de 15 minutes pour discuter de vos besoins en développement Python ?
+
+Disponible cette semaine.
+
+Cordialement,
+[TON_NOM]
+[TON_EMAIL] | [TON_LINKEDIN]</textarea>
+                <button class="btn btn-primary" onclick="copyTemplate('template1')">📋 Copier ce template</button>
+            </div>
+
+            <div class="template-section">
+                <h2>Template 2: Approche Ciblée</h2>
+                <h3>Positionnement freelance Python avec proposition de valeur</h3>
+                <textarea id="template2" readonly>Objet: Expertise Python pour accélérer votre roadmap tech
+
+Bonjour [CONTACT_NAME],
+
+Félicitations pour votre levée de fonds récente chez [NOM_STARTUP] !
+
+En tant que développeur Python spécialisé en [IA/Backend/Data], j'ai accompagné plusieurs startups tech dans leur phase de scaling post-levée.
+
+Mes domaines d'expertise :
+• Développement API REST/GraphQL (FastAPI, Django)
+• Machine Learning &amp; Data Science (Scikit-learn, TensorFlow, PyTorch)
+• Architecture microservices &amp; Cloud (AWS, GCP, Azure)
+• CI/CD &amp; DevOps (Docker, Kubernetes, GitHub Actions)
+
+Je serais ravi d'échanger sur vos défis techniques actuels et comment je pourrais contribuer à votre équipe.
+
+Disponible en freelance ou mission longue durée.
+
+Bien cordialement,
+[TON_NOM]
+[TON_EMAIL] | [TON_LINKEDIN]</textarea>
+                <button class="btn btn-primary" onclick="copyTemplate('template2')">📋 Copier ce template</button>
+            </div>
+
+            <div class="template-section">
+                <h2>Template 3: Proposition de Valeur</h2>
+                <h3>Email détaillé avec cas d'usage et références</h3>
+                <textarea id="template3" readonly>Objet: Développeur Python Senior - Disponible pour [NOM_STARTUP]
+
+Bonjour [CONTACT_NAME],
+
+J'ai remarqué que [NOM_STARTUP] a levé [MONTANT] pour développer [DOMAINE/PRODUIT]. C'est un secteur que je connais bien et où j'ai déjà apporté une réelle valeur ajoutée.
+
+🎯 Mon profil :
+• 7+ années en développement Python backend &amp; data
+• Expérience startup (Série A à C) dans la FinTech, HealthTech et IA
+• Stack : Python 3.11+, FastAPI, Django, PostgreSQL, Redis, Celery
+• Cloud native : AWS (Lambda, ECS, RDS), Terraform, CI/CD
+
+💡 Mes réalisations récentes :
+• Refonte d'une API processing 2M+ requêtes/jour (temps de réponse -60%)
+• Implémentation pipeline ML en production (scikit-learn, MLflow)
+• Migration architecture monolithique → microservices
+
+🚀 Comment je peux vous aider :
+Accélérer votre roadmap produit, optimiser vos performances backend, industrialiser vos modèles ML, ou renforcer votre équipe sur des missions critiques.
+
+Je suis disponible dès maintenant en freelance (temps plein ou partiel).
+
+Seriez-vous disponible pour un call de 20 minutes cette semaine ?
+
+Au plaisir d'échanger,
+
+[TON_NOM]
+Développeur Python Senior
+📧 [TON_EMAIL]
+💼 [TON_LINKEDIN]
+🌐 [TON_PORTFOLIO]</textarea>
+                <button class="btn btn-primary" onclick="copyTemplate('template3')">📋 Copier ce template</button>
+            </div>
+        </div>
+
+        <!-- Graphiques Tab -->
+        <div id="graphiques" class="tab-content">
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <h2>Distribution par Secteur</h2>
+                    <div class="chart-wrapper">
+                        <canvas id="pieChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h2>Montants Levés par Stage</h2>
+                    <div class="chart-wrapper">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h2>Top 15 Startups par Montant Levé</h2>
+                    <div class="chart-wrapper">
+                        <canvas id="horizontalBarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analyse Tab -->
+        <div id="analyse" class="tab-content">
+            <div class="stats-grid" id="statsGrid"></div>
+            
+            <div class="recommendations">
+                <h2>🎯 Recommandations pour la Prospection</h2>
+                <ul>
+                    <li>Privilégier les startups en Série A/B : elles recrutent activement après leur levée</li>
+                    <li>Cibler les secteurs IA, FinTech et MedTech : forte demande en développeurs Python</li>
+                    <li>Personnaliser chaque email avec le montant levé et le secteur d'activité</li>
+                    <li>Contacter les CTO/VP Engineering directement sur LinkedIn</li>
+                    <li>Proposer une mission courte (2-3 mois) pour commencer</li>
+                    <li>Mettre en avant l'expérience avec des stacks similaires</li>
+                    <li>Suivre avec un message de relance après 5-7 jours</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Export Tab -->
+        <div id="export" class="tab-content">
+            <div class="export-actions">
+                <button class="btn btn-primary" onclick="downloadCSV()">📥 Télécharger CSV</button>
+                <button class="btn btn-secondary" onclick="copyAllData()">📋 Copier toutes les données</button>
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Secteur</label>
+                    <select id="exportFilterSector">
+                        <option value="">Tous</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Stage</label>
+                    <select id="exportFilterStage">
+                        <option value="">Tous</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Montant Min (M€)</label>
+                    <input type="number" id="exportMinAmount" placeholder="0">
+                </div>
+                <div class="filter-group">
+                    <label>Montant Max (M€)</label>
+                    <input type="number" id="exportMaxAmount" placeholder="1000">
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table" id="exportTable">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Secteur</th>
+                            <th>Montant Levé</th>
+                            <th>Stage</th>
+                            <th>LinkedIn</th>
+                            <th>Site Web</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody id="exportTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
